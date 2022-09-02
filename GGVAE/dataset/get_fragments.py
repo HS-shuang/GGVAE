@@ -26,10 +26,10 @@ if __name__ == '__main__':
         for i, s in enumerate(smiles):
             if s in vocab:
                 # 将可能的 outer_idx 合并 并 计数
-                vocab[smiles][0].outer.union(frags[i].outer)
-                vocab[smiles][1] += 1
+                vocab[s][0].outer.union(frags[i].outer)
+                vocab[s][1] += 1
             else:
-                vocab[smiles] = [frags[i], 1]
+                vocab[s] = [frags[i], 1]
 
     # save frags
     smiles = [s for s in vocab]

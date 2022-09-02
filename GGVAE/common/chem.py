@@ -104,8 +104,8 @@ def combine(skeleton, arm):
 
 if __name__ == '__main__':
     from rdkit.Chem import Draw
-    mol = Chem.MolFromSmiles('CCCCn1c(=O)[nH]c2cc(C(=O)NCC3OC(n4cnc5c(NCc6ccc(Oc7ccccc7)cc6)ncnc54)C(O)C3O)ccc21')
-    # mol = Chem.MolFromSmiles('COc1ccc(Cn2c(CCc3ccccc3)nnc2C(Cc2c[nH]c3ccccc23)NC(=O)c2cc3ccccc3cn2)cc1')
+    #mol = Chem.MolFromSmiles('CCCCn1c(=O)[nH]c2cc(C(=O)NCC3OC(n4cnc5c(NCc6ccc(Oc7ccccc7)cc6)ncnc54)C(O)C3O)ccc21')
+    mol = Chem.MolFromSmiles('O=C1c2cc3c(cc2-c2c1c1ccccc1c(=O)n2CCCOC(=O)C(F)(F)F)OCO3')
 
     frags = get_frags(Fragment(mol))
     print(mol.GetNumAtoms())
