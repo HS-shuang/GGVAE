@@ -6,10 +6,10 @@ from rdkit import Chem
 
 def load_mols(data_dir, mols_file):
     path = os.path.join(data_dir, mols_file)
-    if mols_file.endswith('.smi'): # processed zinc data
+    if mols_file.endswith('.smi'):  # processed zinc data
         smiles = [line.split()[0] for line in open(path, 'r').readlines()]
 
-    elif mols_file.endswith('.smiles'): # processed zinc data
+    elif mols_file.endswith('.smiles'):  # processed zinc data
         mols = []
         with open(path, 'r') as f:
             lines = f.readlines(int(1e8))
